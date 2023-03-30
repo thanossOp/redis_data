@@ -4,11 +4,11 @@ const { createproduct, getallproduct, searchproduct } = require('../controllers/
 
 const checkredis = require('../middleware/checkredis')
 
-routes.get('/product',checkredis,getallproduct)
+routes.get('/product', checkredis, getallproduct)
 
-routes.post('/product',createproduct)
+routes.post('/product', createproduct)
 
-routes.get('/product/:id',searchproduct)
+routes.get('/product/:id', checkredis, searchproduct)
 
 
 module.exports = routes

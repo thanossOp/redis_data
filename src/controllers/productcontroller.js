@@ -52,7 +52,7 @@ const searchproduct = async(req,res)=>{
             product : sproduct
         })
     } catch (error) {
-        console.log("searchproduct mein error",error)
+        console.log("searchproduct mein error")
     }
 }
 module.exports = {
