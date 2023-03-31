@@ -2,7 +2,8 @@ const redisclient = require("../connection/db")
 
 
 const checkredis = async(req,res,next)=>{
-    const getdata = await redisclient.get('product')
+    const productid = req.params.id
+    const getdata = await redisclient.get(`product:${productid}`)
 
     if(getdata){
         let data = JSON.parse(getdata)

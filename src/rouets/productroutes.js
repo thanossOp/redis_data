@@ -4,7 +4,7 @@ const { createproduct, getallproduct, searchproduct } = require('../controllers/
 
 const checkredis = require('../middleware/checkredis')
 
-routes.get('/product', checkredis, getallproduct)
+routes.get('/product', getallproduct)
 
 routes.post('/product', createproduct)
 
